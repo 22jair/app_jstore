@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
     
@@ -14,7 +16,17 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var cnsCenterYContent: NSLayoutConstraint!
     
-  
+    
+    //import inputs
+    
+    @IBOutlet weak var nameTxt: UITextField!
+    @IBOutlet weak var lastNameTxt: UITextField!
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var signUpBtn: UIButton!
+    
+    
+    //actions
     @IBAction func tapToCloseKeyboard(_ sender: Any) {
         self.view.endEditing(true)
     }
@@ -23,17 +35,64 @@ class SignUpViewController: UIViewController {
             super.viewDidLoad()
         }
         
-        override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-            self.registerKeyboardNotification()
-        }
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         self.registerKeyboardNotification()
+    }
         
-        override func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(animated)
-                self.unregisterKeyboardNotification()
-        }
+    override func viewWillDisappear(_ animated: Bool) {
+         super.viewWillDisappear(animated)
+         self.unregisterKeyboardNotification()
+    }
+    
+    
+    @IBAction func singUpBtnAction(_ sender: Any) {
+        
+        let email = emailTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let firstname = nameTxt.text!.trimmingCharacters(in: .newlines)
+        let lastname = lastNameTxt.text!.trimmingCharacters(in: .newlines)
+       
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            
+            let errMsg = CommonUtility.getAuthErrorMessage(error)
+
+            
+                if let result = result, error == nil{
+                    
+                    self.showAler(title: "Mensaje", message: "Registrado Correctamente")
+                    //self.navigationController?.popToRootViewController(animated: true)
+                    
+                 //   self.navigationController?.pushViewController(PruebaFirebaseController(email: result.user.email!), animated: true)
+
+                    
+                }else{
+                    
+                    self.showAler(title: "Error", message: errMsg)
+                    
+                }
+            }
+        
+    
+    }
+    
+    
+    
+    
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 extension SignUpViewController {
     

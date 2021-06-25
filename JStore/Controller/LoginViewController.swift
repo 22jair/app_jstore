@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -17,13 +18,25 @@ class LoginViewController: UIViewController {
     @IBAction func tapToCloseKeyboard(_ sender: Any) {
         self.view.endEditing(true)
     }
+
+    
+    // Import de Inputs
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
     
     
-      override func viewDidLoad() {
-          super.viewDidLoad()
-      }
+    
+    override func viewDidLoad() {
+         super.viewDidLoad()
+    
+
+    
+    
+    
+    }
       
-      override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
           super.viewWillAppear(animated)
           self.registerKeyboardNotification()
       }
@@ -32,8 +45,55 @@ class LoginViewController: UIViewController {
           super.viewWillDisappear(animated)
               self.unregisterKeyboardNotification()
       }
+    
+    
+    
+    @IBAction func signInButtomAction(_ sender: Any) {
+    
+    
+        if let email = emailTxt.text, let password =  passwordTxt.text {
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                
+                let errMsg = CommonUtility.getAuthErrorMessage(error)
+                
+                if let result = result, error == nil{
+                    self.navigationController?.pushViewController(PruebaFirebaseController(email: result.user.email!), animated: true)
+                }else{
+                    
+                    
+                    
+                    let alertController = UIAlertController(title: "Error", message: errMsg, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+            }
+        }
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
+
+//dummy extension
 extension LoginViewController {
     
     func registerKeyboardNotification() {
