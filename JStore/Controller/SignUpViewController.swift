@@ -13,7 +13,6 @@ class SignUpViewController: UIViewController {
     
     
     @IBOutlet weak var viewContent: UIView!
-    
     @IBOutlet weak var cnsCenterYContent: NSLayoutConstraint!
     
     
@@ -60,8 +59,22 @@ class SignUpViewController: UIViewController {
             
                 if let result = result, error == nil{
                     
+                    
+                    // user was created
+                    let newUser = User(uid: result.user.uid, firstname: firstname, lastname: lastname, email: email)
+                    
+                    // add to users collections
+                    let userVM = UserViewModel()
+                    userVM.createUser(user: newUser)
+                    
+                    
                     self.showAler(title: "Mensaje", message: "Registrado Correctamente")
                     //self.navigationController?.popToRootViewController(animated: true)
+                    
+                    self.nameTxt.text = ""
+                    self.lastNameTxt.text = ""
+                    self.emailTxt.text = ""
+                    self.passwordTxt.text = ""
                     
                  //   self.navigationController?.pushViewController(PruebaFirebaseController(email: result.user.email!), animated: true)
 
@@ -72,26 +85,8 @@ class SignUpViewController: UIViewController {
                     
                 }
             }
-        
-    
     }
-    
-    
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 extension SignUpViewController {

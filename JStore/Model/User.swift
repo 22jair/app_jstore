@@ -32,4 +32,14 @@ class User: Codable {
         
     }
     
+    
+    func getDict() -> [String : Any] {
+        return [
+            "uid":uid,
+            "firstname":firstname,
+            "lastname":lastname,
+            "email":email
+        ]
+     }
+
 }

@@ -57,7 +57,9 @@ class LoginViewController: UIViewController {
                 let errMsg = CommonUtility.getAuthErrorMessage(error)
                 
                 if let result = result, error == nil{
+                    
                     self.navigationController?.pushViewController(PruebaFirebaseController(email: result.user.email!), animated: true)
+                    
                 }else{
                     
                     

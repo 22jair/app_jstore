@@ -409,7 +409,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Restablecer"/>
                                         <connections>
-                                            <segue destination="X6I-xu-TLk" kind="show" id="WPQ-Vf-0Hk"/>
+                                            <action selector="btnResetEmailAction:" destination="Ly7-Lz-tIw" eventType="touchUpInside" id="YsD-Rw-0JQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -437,6 +437,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tgz-Xj-H6c"/>
+                    <connections>
+                        <outlet property="btnReset" destination="I2u-Mu-TuP" id="u3C-Mh-YdT"/>
+                        <outlet property="txtEmail" destination="blu-60-9EA" id="h00-fO-xYI"/>
+                        <segue destination="X6I-xu-TLk" kind="show" id="ldk-0F-4mp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxu-84-scE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
