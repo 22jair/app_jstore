@@ -19,10 +19,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate & UI
     @IBOutlet weak var priceTxt: UITextField!
     @IBOutlet weak var numberTxt: UITextField!
     @IBOutlet weak var placeTxt: UITextField!
-    let image: String = "";
-    
+    var imageData: Data?
     let userViewModel = UserViewModel()
-    let postViewModel = PostViewModel()
+    let postVM = PostViewModel()
+    let firebaseUtil = FirebaseUtils()
     
     let pickerController = UIImagePickerController()
     
@@ -47,17 +47,28 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate & UI
         let price = priceTxt.text!.trimmingCharacters(in: .newlines)
         let number = numberTxt.text!.trimmingCharacters(in: .newlines)
         let place = placeTxt.text!.trimmingCharacters(in: .newlines)
-        
-        let uuid = UUID().uuidString
-       
         let userId = userViewModel.getCurrentUserUid()
-        let user = User(uid:userId)
+        let uuid = UUID().uuidString
+        let path = "img/\(userId)/posts/\(uuid)"
         
-        // new Post
-        let newPost = Post(uid: uuid, user: user , title: title, description: description, price: price, number: number, place: place, image: nil)
+        guard let img = self.imageData else {
+            
+            
+                let newPost = Post(uid: uuid, userId: userId , title: title, description: description, price: price, number: number, place: place, image: nil)
+                
+                let postVM = PostViewModel()
+                postVM.createPost(post: newPost)
+                
+            return
+        }
         
-        let postVM = PostViewModel()
-        postVM.createPost(post: newPost)
+        firebaseUtil.saveFileStorage(data: img , path: path) { (url) in
+        
+            // new Post
+            let newPost = Post(uid: uuid, userId: userId , title: title, description: description, price: price, number: number, place: place, image: nil)
+            
+            self.postVM.createPost(post: newPost)
+        }
         
     }
     

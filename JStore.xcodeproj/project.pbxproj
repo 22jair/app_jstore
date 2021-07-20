@@ -19,6 +19,8 @@
 		942FF401265EC4DE005F5BD0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FF400265EC4DE005F5BD0 /* SignUpViewController.swift */; };
 		9441D4ED26A640B100109CCE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D4EC26A640B100109CCE /* Post.swift */; };
 		9441D4F026A6491C00109CCE /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D4EF26A6491C00109CCE /* PostViewModel.swift */; };
+		9441D51F26A65CAF00109CCE /* FirebaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D51E26A65CAF00109CCE /* FirebaseUtils.swift */; };
+		9441D52926A66BCB00109CCE /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D52826A66BCB00109CCE /* PostListViewController.swift */; };
 		9479B4BE2683837C00250479 /* PruebaFirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */; };
 		94B09A3C26A5F990000D9D2D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A3B26A5F990000D9D2D /* Home.storyboard */; };
 		94B09A4026A5F9C7000D9D2D /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A3F26A5F9C7000D9D2D /* App.storyboard */; };
@@ -51,6 +53,8 @@
 		942FF400265EC4DE005F5BD0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9441D4EC26A640B100109CCE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9441D4EF26A6491C00109CCE /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		9441D51E26A65CAF00109CCE /* FirebaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtils.swift; sourceTree = "<group>"; };
+		9441D52826A66BCB00109CCE /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaFirebaseController.swift; sourceTree = "<group>"; };
 		94B09A3B26A5F990000D9D2D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		94B09A3F26A5F9C7000D9D2D /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		942FF3DD265EA729005F5BD0 /* JStore */ = {
 			isa = PBXGroup;
 			children = (
+				9441D51D26A65C9C00109CCE /* Utils */,
 				94E2EF462683D82E00AD291D /* Utility */,
 				94E2EF442683CABA00AD291D /* Firebase */,
 				94E2EF3F2683C9B600AD291D /* Model */,
@@ -135,6 +140,7 @@
 		942FF3F6265EAA3F005F5BD0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9441D52726A66BB200109CCE /* List */,
 				942FF3F7265EAA6F005F5BD0 /* LoginViewController.swift */,
 				942FF400265EC4DE005F5BD0 /* SignUpViewController.swift */,
 				94E93005265EF52D0032C714 /* ResetPasswordViewController.swift */,
@@ -153,6 +159,22 @@
 				942FF3FC265EB48D005F5BD0 /* CustomUIButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9441D51D26A65C9C00109CCE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9441D51E26A65CAF00109CCE /* FirebaseUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9441D52726A66BB200109CCE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9441D52826A66BCB00109CCE /* PostListViewController.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		94E2EF3F2683C9B600AD291D /* Model */ = {
@@ -323,6 +345,7 @@
 				94B09A4F26A612E4000D9D2D /* UserController.swift in Sources */,
 				9479B4BE2683837C00250479 /* PruebaFirebaseController.swift in Sources */,
 				9441D4ED26A640B100109CCE /* Post.swift in Sources */,
+				9441D51F26A65CAF00109CCE /* FirebaseUtils.swift in Sources */,
 				942FF401265EC4DE005F5BD0 /* SignUpViewController.swift in Sources */,
 				9441D4F026A6491C00109CCE /* PostViewModel.swift in Sources */,
 				942FF3FD265EB48D005F5BD0 /* CustomUIButton.swift in Sources */,
@@ -333,6 +356,7 @@
 				94B09A4C26A60976000D9D2D /* PostViewController.swift in Sources */,
 				94E2EF872683E6EC00AD291D /* Extensions.swift in Sources */,
 				942FF3DF265EA729005F5BD0 /* AppDelegate.swift in Sources */,
+				9441D52926A66BCB00109CCE /* PostListViewController.swift in Sources */,
 				942FF3E1265EA729005F5BD0 /* SceneDelegate.swift in Sources */,
 				94E2EF412683C9D200AD291D /* User.swift in Sources */,
 				94E93006265EF52D0032C714 /* ResetPasswordViewController.swift in Sources */,

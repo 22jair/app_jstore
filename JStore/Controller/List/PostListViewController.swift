@@ -1,24 +1,18 @@
 //
-//  PruebaFirebaseController.swift
+//  PostListViewController.swift
 //  JStore
 //
-//  Created by Jair Arteaga on 5/26/21.
+//  Created by user190858 on 7/19/21.
 //
 
 import UIKit
-import FirebaseAuth
-
-
-
-class HomveViewController: UIViewController {
-   
+class PostLisViewController: UIViewController{
     
     
-   
-
+    
 }
 
-extension HomveViewController: UITableViewDataSource{
+extension PostLisViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 12
@@ -39,4 +33,3 @@ extension HomveViewController: UITableViewDataSource{
     
     
 }
-

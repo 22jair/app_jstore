@@ -11,7 +11,7 @@ import Foundation
 class Post {
     
     var uid: String?
-    var user: User = User()?
+    var userId: String?
     var title: String?
     var description: String?
     var price: String?
@@ -19,10 +19,10 @@ class Post {
     var place: String?
     var image: String?
     
-    init(uid: String, user: User, title: String, description: String, price: String, number: String, place: String, image:String?) {
+    init(uid: String, userId: String, title: String, description: String, price: String, number: String, place: String, image:String?) {
         
         self.uid = uid
-        self.user = user
+        self.userId = userId
         self.title = title
         self.description = description
         self.price = price
@@ -34,7 +34,7 @@ class Post {
     func getDict() -> [String : Any] {
         return [
             "uid": uid as Any,
-            "user":user as Any,
+            "userId":userId,
             "title":title as Any,
             "description":description as Any,
             "price": price as Any,
