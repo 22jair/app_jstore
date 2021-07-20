@@ -58,7 +58,9 @@ class LoginViewController: UIViewController {
                 
                 if let result = result, error == nil{
                     
-                    self.navigationController?.pushViewController(PruebaFirebaseController(email: result.user.email!), animated: true)
+                    //self.navigationController?.pushViewController(PruebaFirebaseController(email: result.user.email!), animated: true)
+                    self.performSegue(withIdentifier: "goToApp", sender: nil)
+                    
                     
                 }else{
                     

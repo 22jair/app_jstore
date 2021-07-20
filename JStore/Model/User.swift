@@ -8,7 +8,7 @@
 import Foundation
 
 
-class User: Codable {
+class User {
     
     var uid: String?
     var firstname: String?
@@ -31,6 +31,11 @@ class User: Codable {
     init(){
         
     }
+    
+    init(uid: String){
+        self.uid = uid
+    }
+    
     
     
     func getDict() -> [String : Any] {

@@ -16,6 +16,10 @@ class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var btnReset: UIButton!
     
     
+    @IBAction func goLogin(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     @IBAction func btnResetEmailAction(_ sender: Any) {
         
         let email = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)

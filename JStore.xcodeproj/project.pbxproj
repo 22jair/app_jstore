@@ -17,7 +17,16 @@
 		942FF3F8265EAA6F005F5BD0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FF3F7265EAA6F005F5BD0 /* LoginViewController.swift */; };
 		942FF3FD265EB48D005F5BD0 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FF3FC265EB48D005F5BD0 /* CustomUIButton.swift */; };
 		942FF401265EC4DE005F5BD0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FF400265EC4DE005F5BD0 /* SignUpViewController.swift */; };
+		9441D4ED26A640B100109CCE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D4EC26A640B100109CCE /* Post.swift */; };
+		9441D4F026A6491C00109CCE /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D4EF26A6491C00109CCE /* PostViewModel.swift */; };
 		9479B4BE2683837C00250479 /* PruebaFirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */; };
+		94B09A3C26A5F990000D9D2D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A3B26A5F990000D9D2D /* Home.storyboard */; };
+		94B09A4026A5F9C7000D9D2D /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A3F26A5F9C7000D9D2D /* App.storyboard */; };
+		94B09A4326A5F9D8000D9D2D /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A4226A5F9D8000D9D2D /* User.storyboard */; };
+		94B09A4626A5F9E6000D9D2D /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A4526A5F9E6000D9D2D /* Post.storyboard */; };
+		94B09A4926A5FDB6000D9D2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B09A4826A5FDB6000D9D2D /* HomeViewController.swift */; };
+		94B09A4C26A60976000D9D2D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B09A4B26A60976000D9D2D /* PostViewController.swift */; };
+		94B09A4F26A612E4000D9D2D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B09A4E26A612E4000D9D2D /* UserController.swift */; };
 		94E2EF412683C9D200AD291D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2EF402683C9D200AD291D /* User.swift */; };
 		94E2EF482683D8AF00AD291D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2EF472683D8AF00AD291D /* Common.swift */; };
 		94E2EF4C2683D92E00AD291D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2EF4B2683D92E00AD291D /* UserViewModel.swift */; };
@@ -40,7 +49,16 @@
 		942FF3F7265EAA6F005F5BD0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		942FF3FC265EB48D005F5BD0 /* CustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 		942FF400265EC4DE005F5BD0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9441D4EC26A640B100109CCE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		9441D4EF26A6491C00109CCE /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaFirebaseController.swift; sourceTree = "<group>"; };
+		94B09A3B26A5F990000D9D2D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		94B09A3F26A5F9C7000D9D2D /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
+		94B09A4226A5F9D8000D9D2D /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		94B09A4526A5F9E6000D9D2D /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		94B09A4826A5FDB6000D9D2D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		94B09A4B26A60976000D9D2D /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		94B09A4E26A612E4000D9D2D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		94E2EF402683C9D200AD291D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		94E2EF472683D8AF00AD291D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		94E2EF4B2683D92E00AD291D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -106,6 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				942FF3E4265EA729005F5BD0 /* Main.storyboard */,
+				94B09A3B26A5F990000D9D2D /* Home.storyboard */,
+				94B09A3F26A5F9C7000D9D2D /* App.storyboard */,
+				94B09A4226A5F9D8000D9D2D /* User.storyboard */,
+				94B09A4526A5F9E6000D9D2D /* Post.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -118,6 +140,9 @@
 				94E93005265EF52D0032C714 /* ResetPasswordViewController.swift */,
 				94E93008265F0DA50032C714 /* ResetPasswordMessageViewController.swift */,
 				9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */,
+				94B09A4826A5FDB6000D9D2D /* HomeViewController.swift */,
+				94B09A4B26A60976000D9D2D /* PostViewController.swift */,
+				94B09A4E26A612E4000D9D2D /* UserController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -134,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				94E2EF402683C9D200AD291D /* User.swift */,
+				9441D4EC26A640B100109CCE /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				94E2EF4B2683D92E00AD291D /* UserViewModel.swift */,
+				9441D4EF26A6491C00109CCE /* PostViewModel.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -233,7 +260,11 @@
 			files = (
 				942FF3EB265EA72A005F5BD0 /* LaunchScreen.storyboard in Resources */,
 				94E9427F2682BA1500C25113 /* GoogleService-Info.plist in Resources */,
+				94B09A4026A5F9C7000D9D2D /* App.storyboard in Resources */,
+				94B09A3C26A5F990000D9D2D /* Home.storyboard in Resources */,
+				94B09A4626A5F9E6000D9D2D /* Post.storyboard in Resources */,
 				942FF3E8265EA72A005F5BD0 /* Assets.xcassets in Resources */,
+				94B09A4326A5F9D8000D9D2D /* User.storyboard in Resources */,
 				942FF3E6265EA729005F5BD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +320,17 @@
 			files = (
 				94E93009265F0DA50032C714 /* ResetPasswordMessageViewController.swift in Sources */,
 				94E2EF4C2683D92E00AD291D /* UserViewModel.swift in Sources */,
+				94B09A4F26A612E4000D9D2D /* UserController.swift in Sources */,
 				9479B4BE2683837C00250479 /* PruebaFirebaseController.swift in Sources */,
+				9441D4ED26A640B100109CCE /* Post.swift in Sources */,
 				942FF401265EC4DE005F5BD0 /* SignUpViewController.swift in Sources */,
+				9441D4F026A6491C00109CCE /* PostViewModel.swift in Sources */,
 				942FF3FD265EB48D005F5BD0 /* CustomUIButton.swift in Sources */,
+				94B09A4926A5FDB6000D9D2D /* HomeViewController.swift in Sources */,
 				94E2EF482683D8AF00AD291D /* Common.swift in Sources */,
 				942FF3F8265EAA6F005F5BD0 /* LoginViewController.swift in Sources */,
 				942FF3E3265EA729005F5BD0 /* ViewController.swift in Sources */,
+				94B09A4C26A60976000D9D2D /* PostViewController.swift in Sources */,
 				94E2EF872683E6EC00AD291D /* Extensions.swift in Sources */,
 				942FF3DF265EA729005F5BD0 /* AppDelegate.swift in Sources */,
 				942FF3E1265EA729005F5BD0 /* SceneDelegate.swift in Sources */,

@@ -9,27 +9,21 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-class UserViewModel {
+class PostViewModel {
     
     private var db = Firestore.firestore()
     
-    func getCurrentUserUid() -> String {
-        
-        return Auth.auth().currentUser?.uid ?? ""
-        
-    }
-    
-    func createUser(user: User) {
+    func createPost(post: Post) {
         
         // Add a new document with a generated ID
         var ref: DocumentReference? = nil
-        ref = db.collection("users").addDocument(data: user.getDict()) { err in
+        ref = db.collection("posts").addDocument(data: post.getDict()) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
                 print("Document added with ID: \(ref!.documentID)")
             }
         }
-        	
+            
     }
 }

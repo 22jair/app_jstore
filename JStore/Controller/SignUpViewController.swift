@@ -30,6 +30,11 @@ class SignUpViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    
+    @IBAction func goLogin(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
             super.viewDidLoad()
         }
