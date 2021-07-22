@@ -23,6 +23,7 @@
 		9441D52926A66BCB00109CCE /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D52826A66BCB00109CCE /* PostListViewController.swift */; };
 		9465A05626A8964A00EB5000 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9465A05526A8964A00EB5000 /* PostTableViewCell.swift */; };
 		9479B4BE2683837C00250479 /* PruebaFirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */; };
+		948733BA26A9311400E4BDD7 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948733B926A9311400E4BDD7 /* PostDetailViewController.swift */; };
 		94B09A3C26A5F990000D9D2D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A3B26A5F990000D9D2D /* Home.storyboard */; };
 		94B09A4026A5F9C7000D9D2D /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A3F26A5F9C7000D9D2D /* App.storyboard */; };
 		94B09A4326A5F9D8000D9D2D /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A4226A5F9D8000D9D2D /* User.storyboard */; };
@@ -58,6 +59,7 @@
 		9441D52826A66BCB00109CCE /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		9465A05526A8964A00EB5000 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaFirebaseController.swift; sourceTree = "<group>"; };
+		948733B926A9311400E4BDD7 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		94B09A3B26A5F990000D9D2D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		94B09A3F26A5F9C7000D9D2D /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		94B09A4226A5F9D8000D9D2D /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
@@ -149,8 +151,9 @@
 				94E93008265F0DA50032C714 /* ResetPasswordMessageViewController.swift */,
 				9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */,
 				94B09A4826A5FDB6000D9D2D /* HomeViewController.swift */,
-				94B09A4B26A60976000D9D2D /* PostViewController.swift */,
 				94B09A4E26A612E4000D9D2D /* UserController.swift */,
+				94B09A4B26A60976000D9D2D /* PostViewController.swift */,
+				948733B926A9311400E4BDD7 /* PostDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				94E93009265F0DA50032C714 /* ResetPasswordMessageViewController.swift in Sources */,
 				94E2EF4C2683D92E00AD291D /* UserViewModel.swift in Sources */,
 				94B09A4F26A612E4000D9D2D /* UserController.swift in Sources */,
+				948733BA26A9311400E4BDD7 /* PostDetailViewController.swift in Sources */,
 				9479B4BE2683837C00250479 /* PruebaFirebaseController.swift in Sources */,
 				9441D4ED26A640B100109CCE /* Post.swift in Sources */,
 				9441D51F26A65CAF00109CCE /* FirebaseUtils.swift in Sources */,

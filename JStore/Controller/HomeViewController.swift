@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 
 
-class HomveViewController: UIViewController {
+class HomeViewController: UIViewController {
    
     @IBOutlet weak var table: UITableView!
     let postVM = PostViewModel()
@@ -22,8 +22,6 @@ class HomveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         self.getPosts()
         // self.arrayPost = [Post(uid: "321321", userId: "213231", title: "titulo jeje", description: "desc", price: "123", number: "12321", place: "lugar", image: "url", fechaCreada: Date())]
         
@@ -65,41 +63,21 @@ class HomveViewController: UIViewController {
                     } catch { print(error) }
                 }
                 
-                else if (diff.type == .removed) {
-                  
-                }
+                else if (diff.type == .removed) { }
             }
 
         }
-        
-        
-        
-        /*
-        db.collection("posts").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                
-                for d in querySnapshot!.documents {
-                    
-
-                    
-                    let post = Post(uid: d.documentID, userId: d.get("userId") as! String, title: d.get("title") as! String, description: d.get("description") as! String, price: d.get("price") as! String, number: d.get("number") as! String, place: d.get("place") as! String, image: (d.get("image") as! String))
-                    
-                    self.arrayPost.append(post)
-                    
-
-                }
-            }
-        } */
-    
     }
     
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller =  segue.destination as? PostDetailViewController, let objPost = sender as? Post{
+            controller.objPost = objPost
+        }
+    }
 
 }
 
-extension HomveViewController: UITableViewDataSource{
+extension HomeViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.arrayPost.count
@@ -114,11 +92,13 @@ extension HomveViewController: UITableViewDataSource{
         
         return cell ?? UITableViewCell()
     }
-    
-    
-    
-    
-    
-    
 }
 
+extension HomeViewController: UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let objPost = self.arrayPost[indexPath.row]
+        self.performSegue(withIdentifier: "PostDetailViewController", sender: objPost)
+    }
+    
+}

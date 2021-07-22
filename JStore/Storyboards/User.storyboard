@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="aiK-R6-wws">
             <objects>
-                <viewController storyboardIdentifier="IdUserController" id="rUd-sx-SqU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdUserController" id="rUd-sx-SqU" customClass="UserController" customModule="JStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jzm-o5-Gii">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cerrar Sesion"/>
                                 <connections>
+                                    <action selector="btnCloseSession:" destination="rUd-sx-SqU" eventType="touchUpInside" id="ijx-QS-XJR"/>
                                     <action selector="btnCloseSession:" destination="qEU-ia-0Ci" eventType="touchUpInside" id="sX7-u7-mt8"/>
                                 </connections>
                             </button>
