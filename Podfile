@@ -12,6 +12,8 @@ target 'JStore' do
   #pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Storage'
   pod 'CodableFirebase'
+  
+  pod 'Alamofire'
 
 end
 

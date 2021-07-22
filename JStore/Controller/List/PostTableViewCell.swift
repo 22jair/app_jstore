@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class PostTableViewCell: UITableViewCell{
     
     @IBOutlet weak private var lblTitle: UILabel!
     @IBOutlet weak private var lblDescription: UILabel!
     @IBOutlet weak private var lblPrice: UILabel!
+    @IBOutlet weak private var imgPost: UIImageView!
     
     var objPost: Post!{
         didSet { self.updateData() }
@@ -21,6 +23,17 @@ class PostTableViewCell: UITableViewCell{
         self.lblTitle.text =  self.objPost.title
         self.lblDescription.text = self.objPost.description
         self.lblPrice.text = self.objPost.price
+        
+        guard let url_image = URL(string: self.objPost.image ?? "") else { return }
+        let url_img_request = URLRequest(url: url_image as URL)
+        
+        AF.request(url_img_request).response { responseData in
+            
+            guard let data = responseData.data else { return }
+            let image = UIImage(data: data)
+            self.imgPost.image = image
+        }
+        
     }
     
 }

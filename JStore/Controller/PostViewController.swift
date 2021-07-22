@@ -64,7 +64,7 @@ class PostViewController: UIViewController{
         firebaseUtil.saveFileStorage(data: img , path: path) { (url) in
         
             // new Post
-            let newPost = Post(uid: uuid, userId: userId , title: title, description: description, price: price, number: number, place: place, image: nil, fechaCreada: Date())
+            let newPost = Post(uid: uuid, userId: userId , title: title, description: description, price: price, number: number, place: place, image: url, fechaCreada: Date())
             
             self.postVM.createPost(post: newPost)
             

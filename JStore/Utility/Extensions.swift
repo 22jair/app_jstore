@@ -20,3 +20,23 @@ extension UIViewController {
     }
     
 }
+
+extension UIImageView {
+    
+    typealias DownloadSuccess = (_ image: UIImage?, _ urlString: String) -> Void
+    
+    func setImage(from urlString: String, success: @escaping DownloadSuccess) {
+        
+        guard let imageURL = URL(string: urlString) else { return }
+
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                success(image, urlString)
+            }
+        }
+    }
+    
+}

@@ -52,8 +52,9 @@ class HomveViewController: UIViewController {
                         let title = diff.document.get("title") as! String
                         let description = diff.document.get("description") as! String
                         let price = diff.document.get("price") as! String
+                        let image = diff.document.get("image") as! String
                         
-                        let post = Post(uid: uid, userId: userId, title: title, description: description, price: price, number: ".", place: ".", image: ".", fechaCreada: Date())
+                        let post = Post(uid: uid, userId: userId, title: title, description: description, price: price, number: ".", place: ".", image: image, fechaCreada: Date())
                         
                        // let post = try diff.document.data(as: Post)
                         self.arrayPost.append(post)
