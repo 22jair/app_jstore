@@ -26,4 +26,19 @@ class PostViewModel {
         }
             
     }
+    
+    func getPosts() {
+        db.collection("posts").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                let docuemtns:[Any] = []
+                for d in querySnapshot!.documents {
+                    
+                    
+
+                }
+            }
+        }
+    }
 }

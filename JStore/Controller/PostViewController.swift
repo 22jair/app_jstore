@@ -10,15 +10,15 @@ import FirebaseAuth
 
 
 
-class PostViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class PostViewController: UIViewController{
    
-   
-    
     @IBOutlet weak var titleTxte: UITextField!
     @IBOutlet weak var descriptionTxt: UITextField!
     @IBOutlet weak var priceTxt: UITextField!
     @IBOutlet weak var numberTxt: UITextField!
     @IBOutlet weak var placeTxt: UITextField!
+    @IBOutlet weak var ImgPreview: UIImageView!
+    
     var imageData: Data?
     let userViewModel = UserViewModel()
     let postVM = PostViewModel()
@@ -53,8 +53,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate & UI
         
         guard let img = self.imageData else {
             
-            
-                let newPost = Post(uid: uuid, userId: userId , title: title, description: description, price: price, number: number, place: place, image: nil)
+                let newPost = Post(uid: uuid, userId: userId , title: title, description: description, price: price, number: number, place: place, image: nil, fechaCreada: Date())
                 
                 let postVM = PostViewModel()
                 postVM.createPost(post: newPost)
@@ -65,11 +64,46 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate & UI
         firebaseUtil.saveFileStorage(data: img , path: path) { (url) in
         
             // new Post
-            let newPost = Post(uid: uuid, userId: userId , title: title, description: description, price: price, number: number, place: place, image: nil)
+            let newPost = Post(uid: uuid, userId: userId , title: title, description: description, price: price, number: number, place: place, image: nil, fechaCreada: Date())
             
             self.postVM.createPost(post: newPost)
+            
+            self.showAler(title: "Mensaje", message: "Publicado Correctamente")
+            //self.navigationController?.popToRootViewController(animated: true)
+            
+            self.titleTxte.text = ""
+            self.descriptionTxt.text = ""
+            self.priceTxt.text = ""
+            self.numberTxt.text = ""
+            self.placeTxt.text = ""
+       
+            
+            
         }
         
+    }
+    
+}
+
+extension PostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+            return
+        }
+        
+        guard let d: Data = image.jpegData(compressionQuality: 0.8) else { return }
+        
+        imageData = d
+    
+        ImgPreview.image = image
+        picker.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
 }

@@ -21,6 +21,7 @@
 		9441D4F026A6491C00109CCE /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D4EF26A6491C00109CCE /* PostViewModel.swift */; };
 		9441D51F26A65CAF00109CCE /* FirebaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D51E26A65CAF00109CCE /* FirebaseUtils.swift */; };
 		9441D52926A66BCB00109CCE /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441D52826A66BCB00109CCE /* PostListViewController.swift */; };
+		9465A05626A8964A00EB5000 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9465A05526A8964A00EB5000 /* PostTableViewCell.swift */; };
 		9479B4BE2683837C00250479 /* PruebaFirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */; };
 		94B09A3C26A5F990000D9D2D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A3B26A5F990000D9D2D /* Home.storyboard */; };
 		94B09A4026A5F9C7000D9D2D /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B09A3F26A5F9C7000D9D2D /* App.storyboard */; };
@@ -55,6 +56,7 @@
 		9441D4EF26A6491C00109CCE /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		9441D51E26A65CAF00109CCE /* FirebaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtils.swift; sourceTree = "<group>"; };
 		9441D52826A66BCB00109CCE /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		9465A05526A8964A00EB5000 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		9479B4BD2683837C00250479 /* PruebaFirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaFirebaseController.swift; sourceTree = "<group>"; };
 		94B09A3B26A5F990000D9D2D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		94B09A3F26A5F9C7000D9D2D /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				9441D52826A66BCB00109CCE /* PostListViewController.swift */,
+				9465A05526A8964A00EB5000 /* PostTableViewCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				942FF3F8265EAA6F005F5BD0 /* LoginViewController.swift in Sources */,
 				942FF3E3265EA729005F5BD0 /* ViewController.swift in Sources */,
 				94B09A4C26A60976000D9D2D /* PostViewController.swift in Sources */,
+				9465A05626A8964A00EB5000 /* PostTableViewCell.swift in Sources */,
 				94E2EF872683E6EC00AD291D /* Extensions.swift in Sources */,
 				942FF3DF265EA729005F5BD0 /* AppDelegate.swift in Sources */,
 				9441D52926A66BCB00109CCE /* PostListViewController.swift in Sources */,
