@@ -21,27 +21,25 @@ class UserController: UIViewController {
         
         let userId = userViewModel.getCurrentUserUid()
         
-        let docRef = db.collection("users").document(userId)
+        let docRef = db.collection("users").whereField("uid", isEqualTo: userId)
         
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                
-                do {
+        docRef.getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    let document = querySnapshot!.documents[0]
+                      
                     self.userNames.text = document.get("firstname") as? String
                     self.userLastName.text = document.get("lastname") as? String
                     self.userEmail.text =  document.get("email") as? String
+                    
+                }
+        
+       
 
-                } catch { print(error) }
-
-            } else {
-                print("Document does not exist")
-            }
         }
-        
-
-        
-    }
     
+    }
     
     
     
