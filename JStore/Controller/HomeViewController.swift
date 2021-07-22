@@ -52,7 +52,11 @@ class HomeViewController: UIViewController {
                         let price = diff.document.get("price") as! String
                         let image = diff.document.get("image") as! String
                         
-                        let post = Post(uid: uid, userId: userId, title: title, description: description, price: price, number: ".", place: ".", image: image, fechaCreada: Date())
+                        let place = diff.document.get("place") as! String
+                        
+                        let number = diff.document.get("number") as! String
+                        
+                        let post = Post(uid: uid, userId: userId, title: title, description: description, price: price, number: number, place: place, image: image, fechaCreada: Date())
                         
                        // let post = try diff.document.data(as: Post)
                         self.arrayPost.append(post)

@@ -77,7 +77,7 @@ class PostViewController: UIViewController{
             self.numberTxt.text = ""
             self.placeTxt.text = ""
        
-            
+            self.ImgPreview.image = nil
             
         }
         

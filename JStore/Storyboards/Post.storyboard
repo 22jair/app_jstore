@@ -3,13 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Postear-->
         <scene sceneID="s31-ff-zSF">
             <objects>
                 <viewController storyboardIdentifier="IdPostController" id="TZ0-Mf-d0N" customClass="PostViewController" customModule="JStore" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +36,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripcion del Producto" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URf-fJ-wsy">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripcion del Producto" textAlignment="center" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URf-fJ-wsy">
                                         <rect key="frame" x="25" y="126" width="364" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="5oN-dF-pPB"/>
@@ -89,7 +88,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAi-ji-dEJ">
                                         <rect key="frame" x="25" y="637" width="364" height="50"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="backgroundColor" red="0.18082658309999999" green="0.17959748310000001" blue="0.25760290029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="5E7-xv-rYT"/>
                                         </constraints>
@@ -158,7 +157,7 @@
                             <outletCollection property="gestureRecognizers" destination="RNh-YB-XUm" appends="YES" id="GXo-g8-HF4"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.up" catalog="system" selectedImage="square.and.arrow.up" id="nGA-xL-QZQ"/>
+                    <tabBarItem key="tabBarItem" title="Postear" image="square.and.arrow.up" catalog="system" selectedImage="square.and.arrow.up" id="nGA-xL-QZQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ImgPreview" destination="GLK-dI-ATJ" id="PHQ-kh-b10"/>
@@ -181,9 +180,6 @@
     </scenes>
     <resources>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

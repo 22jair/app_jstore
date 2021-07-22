@@ -22,7 +22,7 @@ class PostTableViewCell: UITableViewCell{
     private func updateData(){
         self.lblTitle.text =  self.objPost.title
         self.lblDescription.text = self.objPost.description
-        self.lblPrice.text = self.objPost.price
+        self.lblPrice.text = "Precio: S/." + self.objPost.price!  
         
         guard let url_image = URL(string: self.objPost.image ?? "") else { return }
         let url_img_request = URLRequest(url: url_image as URL)
